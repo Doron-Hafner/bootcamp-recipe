@@ -10,9 +10,10 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
 app.use('/', api)
 
-const port = 3000
+const port = 8080
 app.listen(port, () => console.log(`server start on port ${port}`))
 
 

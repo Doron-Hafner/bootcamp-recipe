@@ -9,10 +9,33 @@
 </head>
 
 <body>
+    <div class="container">
+        <input type="text" id="ingredient" placeholder="enter ingredirnt">
+        <button id="submit">Search!</button>
+        <div id="recipes-container">
 
-    <script src="./jquery/dist/jquery.js"></script>
-    <script src="./handlebars/dist/handlebars.js"></script>
-    <script src="main.js"></script>
+            <script id="recipe-template" type="text/x-handlebars-template">
+             {{#each data}}
+            <div class="recipe">
+                <a href= {{href}} >{{title}} </a>
+                <img class="recipeImg" src="{{thumbnail}}">
+                <ul>
+                    {{#each ingredients}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    
+    </script>
+
+
+
+            <script src="./jquery/dist/jquery.js"></script>
+            <script src="./handlebars/dist/handlebars.js"></script>
+            <script src="main.js"></script>
 </body>
 
 </html>
