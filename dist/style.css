@@ -1,13 +1,44 @@
-#ingredient {
-    width: 70%;
+body {
+    font-family: sans-serif;
+    background-color: burlywood;
 }
-#submit {
-    width: 20%;
+
+#search-bar{
+    display: grid;
+    grid-template-columns: 8fr 1.5fr;
+    height: 4rem;
+    margin-bottom: 2em;
+    justify-content: center;
 }
-#recipe-container {
-    
+
+#recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-gap: 1rem;
+    justify-content: center;
+    max-width: 98vw;
+    height: 100%;
+
 }
+
+#ingredient,#submit,a {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+a {
+    margin: auto;
+}
+
+.recipe {
+    border: solid;
+    display: grid;
+    grid-template-rows: 60px 10fr 12fr;
+    background-color: antiquewhite;
+}
+
+
 .recipeImg {
-    width: 100px;
-    height: 100px;
+    margin: auto;
+    width: 80%;
 }
